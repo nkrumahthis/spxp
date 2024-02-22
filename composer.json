@@ -1,10 +1,22 @@
 {
     "name": "nkrumahthis/xml-to-array",
     "description": "Parses an XML string into an array",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Emmanuel Nkrumah-Sarpong",
+            "email": "nkrumahthis@gmail.com"
+        }
+        
+    ],
     "autoload": {
         "psr-4": {
             "Nkrumahthis\\XMLToArray\\": "src/"
         }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.6"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
