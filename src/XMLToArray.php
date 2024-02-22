@@ -1,5 +1,7 @@
 <?php
 
+namespace Nkrumahthis\XMLToArray;
+
 class XMLToArray
 {
     public static function parse($xmlString)
