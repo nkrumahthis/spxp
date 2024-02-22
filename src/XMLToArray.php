@@ -1,5 +1,4 @@
 <?php
-namespace App\utils;
 
 class XMLToArray
 {
