@@ -1,0 +1,11 @@
+{
+    "name": "nkrumahthis/xml-to-array",
+    "description": "Parses an XML string into an array",
+    "autoload": {
+        "psr-4": {
+            "Nkrumahthis\\XMLToArray\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
