@@ -1,9 +1,9 @@
 <?php
 namespace App\utils;
 
-class XmlUtil
+class XMLToArray
 {
-    public static function xmlStringToArray($xmlString)
+    public static function parse($xmlString)
     {
         $xmlArray = [];
         $parser = xml_parser_create();
