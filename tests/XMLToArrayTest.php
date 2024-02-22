@@ -28,6 +28,33 @@ class XMLToArrayTest extends TestCase
         $this->assertEquals($expectedArray, $resultArray);
     }
 
+    public function testParseXMLWithAttributes()
+    {
+        $xmlString = '<?xml version="1.0" encoding="UTF-8"?>
+            <root>
+                <person gender="male">
+                    <name>John Doe</name>
+                    <age>30</age>
+                    <city>New York</city>
+                </person>
+            </root>';
+
+        $expectedArray = [
+            'root' => [
+                'person' => [
+                    '@attributes' => ['gender' => 'male'],
+                    'name' => 'John Doe',
+                    'age' => '30',
+                    'city' => 'New York'
+                ]
+            ]
+        ];
+
+        $resultArray = XMLToArray::parse($xmlString);
+
+        $this->assertEquals($expectedArray, $resultArray);
+    }
+
     public function testParseEmptyXML()
     {
         $xmlString = '<?xml version="1.0" encoding="UTF-8"?>

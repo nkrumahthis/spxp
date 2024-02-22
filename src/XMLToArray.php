@@ -19,8 +19,14 @@ class XMLToArray
             $attributes = isset($data['attributes']) ? $data['attributes'] : null;
 
             if ($data['type'] == 'open') {
-                $current[$tag] = [];
-                $current = &$current[$tag];
+                // Check if the element has attributes
+                if ($attributes) {
+                    $current[$tag] = ['@attributes' => $attributes];
+                    $current = &$current[$tag];
+                } else {
+                    $current[$tag] = [];
+                    $current = &$current[$tag];
+                }
             } elseif ($data['type'] == 'complete') {
                 $current[$tag] = $value;
             } elseif ($data['type'] == 'close') {
