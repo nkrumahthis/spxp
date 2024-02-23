@@ -46,7 +46,7 @@ Array
 To run PHPUnit tests, use:
 
 ```php
-vendor/bin/phpunit
+vendor/bin/phpunit .
 ```
 
 ## Contributing
